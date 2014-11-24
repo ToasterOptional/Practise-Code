@@ -14,6 +14,7 @@ void draw() {
   vel.add(acc);
   loc.add(vel);
  vel.set(mouseX,mouseY);
+// vel.normalize();      //mouse position relative to (0,0) 
  float sz = random(40,60);
  fill(frameCount%360,100,100,50);
   ellipse(loc.x, loc.y, sz, sz);

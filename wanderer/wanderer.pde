@@ -14,12 +14,12 @@ strokeWeight(0.3);
   locy= height/2;
 
   //initialize velecotiy
-  velx= random(-1, 3);
-  vely = random(-4, 3);
+  velx= random(-1,1);
+  vely = random(-2, 2);
 
   //initialize acc
-//  accx = 0.1;
-//  accy=0.2;
+ accx = random(-0.1,0.1);
+ accy=random(-0.2,0.2);
 }
 
 void draw() {
@@ -29,6 +29,7 @@ void draw() {
 
   locx+= velx;
   locy+= vely;
+ 
  
  fill(frameCount%360, 100,100, 50);
  
@@ -48,7 +49,7 @@ void draw() {
   }
 }
 
-void mousePressed(){
-    accx = random(0.1,1);
-  accy=random(0.2,2);
-}
+//void mousePressed(){
+//    accx = random(-0.1,1);
+//  accy=random(-0.2,2);
+//}
