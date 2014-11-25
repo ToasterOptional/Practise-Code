@@ -1,4 +1,5 @@
-int count = 100;
+int count = 99
+;
 //declare loc, vel, and acc arrays
 PVector[] loc = new PVector[count];
 PVector[] vel = new PVector[count];
@@ -7,7 +8,8 @@ float[] sz = new float[count];
 
 void setup() {
  colorMode(HSB, 360,100,100,100);
-//strokeWeight(.5);
+noStroke();
+background(0);
  size(800, 600);
   for (int i = 0; i < count; i++) {    //access each index in the arrays...
     sz[i] = random(10, 50);           //initialize the values in sz[] array
@@ -18,8 +20,8 @@ void setup() {
 }
 
 void draw() {
-  background(200);
-
+fill(0,10);
+rect(0,0,displayWidth,displayHeight);
   for (int i = 0; i < count; i++) {    //access each index in the arrays...
     //move the ball
     vel[i].add(acc[i]);
@@ -50,8 +52,8 @@ void draw() {
 
     //draw the ball
 
-fill(320,100,35,50);
-    ellipse(loc[i].x, loc[i].y, sz[i], sz[i]);
+fill(frameCount%360,100,100,100);
+ellipse(loc[i].x, loc[i].y, sz[i], sz[i]);
 
     //bounce the ball
     if (loc[i].x + sz[i]/2 > width || loc[i].x - sz[i]/2 < 0) {
@@ -66,3 +68,7 @@ fill(320,100,35,50);
 void mouseReleased() {
   loc[0].set(mouseX, mouseY);
 }
+
+//if you normalize a vector you keep the directions
+//and set the velocity to 1
+

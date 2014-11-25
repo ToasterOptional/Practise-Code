@@ -49,5 +49,5 @@ void draw() {
   }
 
   //draw a small circle to indicate mouse location
-  ellipse(mouse.x, mouse.y, 5, 5);
+  ellipse(mouse.x, mouse.y, 15, 15);
 }
