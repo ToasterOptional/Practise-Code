@@ -12,7 +12,8 @@ void draw() {
   background(0);
     fill (125,60,90,60);
   for (int i = 0; i < bapple.length; i++) {
-sd
+
+    
     bapple[i].display();
     bapple[i].move();
     bapple[i].wallBounce();
