@@ -9,7 +9,7 @@ void setup() {
 
 void draw() {
   //add a new BouncyBall using the .add() method
-  balls.add(new BouncyBall(30));
+  balls.add(new Bouncer(30));
   background(0);
   fill(255, 0, 0);
   //use a for loop to go through all possible values for the index
