@@ -6,7 +6,7 @@ ArrayList<Particle> allmyParticles = new ArrayList<Particle>();
 void setup() {
   noStroke();
   size(750, 750);
-  //naming p a new particle
+ 
 }
 
 void draw() {
@@ -28,8 +28,8 @@ void draw() {
  
     Particle() {
       loc= new PVector(width/2, height*.1);
-      vel = new PVector(random(-3.3), random(-4, -2));
-      acc = new PVector(0, 0.1);
+      vel = new PVector(random(-3,3), random(-4, -2));
+      acc = new PVector(0, .1);
       sz = 10;
     }
     void display() {
