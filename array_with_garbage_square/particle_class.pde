@@ -1,24 +1,21 @@
 class Particle {
-  float x;
-  float y;
-  float xspeed;
-  float yspeed;
-  float life;
+  float x, y, xspeed, yspeed, life;
+//there are these float components
 
-  // Make the Particle
+  // Make the Particle, this is what a particle contains
   Particle(float tempX, float tempY) {
-    x = tempX;
-    y = tempY;
+    x = tempX;    //because later on x= xspeed and that's random, therefore its a temporary x
+    y = tempY;      //same as ^
     xspeed = random(-1, 1);
     yspeed = random(-2, 0);
-    life = 255;
+    life = 255; 
   }
   // Show
   void display() {
     // Life is used to fade out the particle as well
-    stroke(0, life);
-    fill(#B26899, life);
-    ellipse(x, y, 20, 20);
+    stroke(#1F0655, life);  //black outline for as long as life
+    fill(#754B98, life);  //this colour for as long as life
+    ellipse(x, y, 20, 20); //just the particle balls
   }
 
   // Move
