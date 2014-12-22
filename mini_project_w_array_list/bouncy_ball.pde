@@ -2,8 +2,8 @@ class Bouncer {
   PVector loc, vel;
   float sz;
 
-  Bouncer() {
-    sz = 20;
+  Bouncer(float tempsz) {
+    sz = tempsz;
     loc = new PVector(random(sz, width-sz), random(sz, height-sz));
     vel = PVector.random2D();
   }
@@ -14,7 +14,6 @@ class Bouncer {
   void move() {
     loc.add(vel);
   }
-
   void wallBounce() {
     if (loc.x + sz/2 > width) {
       vel.x = -abs(vel.x);
@@ -29,7 +28,6 @@ class Bouncer {
       vel.y = abs(vel.y);
     }
   }
-
   void collideWith(Bouncer someOtherBall) {
     if (loc.dist(someOtherBall.loc) < sz/2 + someOtherBall.sz/2) {
       vel = PVector.sub(loc, someOtherBall.loc);
@@ -37,5 +35,4 @@ class Bouncer {
     }
   }
 }
-
-
+}
