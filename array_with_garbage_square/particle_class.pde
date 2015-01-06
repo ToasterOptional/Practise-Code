@@ -10,7 +10,7 @@ class Particle {
     yspeed = random(-2, 0);
     life = 255; 
   }
-  // Show
+  // Show things
   void display() {
     // Life is used to fade out the particle as well
     stroke(#1F0655, life);  //black outline for as long as life
@@ -41,7 +41,7 @@ class Particle {
     // When it reaches 0 the Particle can be removed from the ArrayList.
     life -= 2.0; 
     if (life < 0) return true;
-    else return false;
+    else return false;        //this checks if it's dead or not
   }
 }
 
